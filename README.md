@@ -5,12 +5,15 @@ Loosely based on [Daniel Beer's approach](https://dlbeer.co.nz/articles/sudoku.h
 puzzles.
 
 Build with:
+
     cargo build --release
 
 To generate wasm use wasm-pack:
+
     wasm-pack build --release
 
 To run, execute the 'wi-exec' binary, or use:
+
     cargo run --release -- *any arguments you want to pass in go here*
 
 Running the executable without any inputs will generate a sudoku puzzle string. If you want to automatically see the puzzle's solution you can do so by passing in the --verbose flag.
