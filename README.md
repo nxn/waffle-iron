@@ -16,7 +16,7 @@ To run, execute the 'wi-exec' binary, or use:
 
 Running the executable without any inputs will generate a sudoku puzzle string. If you want to automatically see the puzzle's solution you can do so by passing in the --verbose flag.
 
-To solve a puzzle pass in an 81 digit long number (0s indicate empty cells) with **-p** or **--puzzle=**"number".
+To solve a puzzle pass in an 81 digit long number (0s indicate empty cells) with **-p** or **--puzzle**.
 
 ### Arguments:
 
