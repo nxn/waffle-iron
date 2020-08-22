@@ -24,7 +24,7 @@ Argument | Shorthand | Description
 ---------|-----------|------------
 **--verbose** | **-v** | Prints additional info and statistics; will print solution when used to generate puzzles.
 **--limit=**[0-9] | **-l**[0-9] | Limits the number of solutions the solver will attempt to find. Useful when confirming a puzzle only has a single solution. Default behavior is to end solving after finding the first solution.
-**--puzzle=**[0-9]{81} | **-p** [0-9]{81} | Solves the passed in puzzle string
+**--puzzle=**[0-9]{81} | **-p**&nbsp;[0-9]{81} | Solves the passed in puzzle string
 
 ### Examples:
 
