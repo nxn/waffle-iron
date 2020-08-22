@@ -1,7 +1,5 @@
 # waffle-iron
-Rust sudoku puzzle generator and solver that can compile to WASM.
-
-Loosely based on [Daniel Beer's approach](https://dlbeer.co.nz/articles/sudoku.html) to solving and generating sudoku 
+Rust sudoku puzzle generator and solver that can compile to WASM. Loosely based on [Daniel Beer's approach](https://dlbeer.co.nz/articles/sudoku.html) to solving and generating sudoku 
 puzzles.
 
 Build with:
@@ -21,7 +19,9 @@ Running the executable without any inputs will generate a sudoku puzzle string. 
 To solve a puzzle pass in an 81 digit long number (0s indicate empty cells) with -p or --puzzle="number".
 
 ###Arguments:
+
 Argument | Description
+---------|------------
 **-v**, **--verbose** | Prints additional info and statistics; will print solution when used to generate puzzles.
 **-l**"number", **--limit=**"number" | Limits the number of solutions the solver will attempt to find. Useful when confirming a puzzle only has a single solution. Default behavior is to end solving after finding the first solution.
 **-p** "81 digit number", **--puzzle=**"81 digit number" | 
