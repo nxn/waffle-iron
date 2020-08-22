@@ -1,0 +1,40 @@
+[package]
+name = "waffle-iron"
+version = "0.1.0"
+authors = ["nxn <ernie@corrupt.it>"]
+edition = "2018"
+
+[lib]
+name = "waffle_iron"
+path = "src/lib.rs"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "wi-exec"
+path = "src/bin/wi-exec/main.rs"
+
+[features]
+#default = ["console_error_panic_hook"]
+
+[dependencies]
+im-rc       = "14.3.0"
+bitflags    = "1.2.1"
+arr_macro   = "0.1.3"
+lazy_static = "1.4.0"
+getrandom   = "0.1"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen                = { version = "0.2" }
+getrandom                   = { version = "0.1", features = ["wasm-bindgen"] }
+console_error_panic_hook    = { version = "0.1.1", optional = true }
+
+[dev-dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+
+# https://github.com/rustwasm/wasm-pack/issues/886
+# --enable-mutable-globals must be passed as an argument to wasm-opt or it will fail with a fatal error
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ["-O3", "--enable-mutable-globals"]
