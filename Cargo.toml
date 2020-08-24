@@ -1,8 +1,12 @@
 [package]
 name = "waffle-iron"
 version = "0.1.0"
-authors = ["nxn <ernie@corrupt.it>"]
+authors = ["Ernie Wieczorek <ernie@nxn.io>"]
 edition = "2018"
+license = "MIT"
+license-file = "LICENSE"
+description = "Rust sudoku solver and generator that can compile to WASM."
+repository = "https://github.com/nxn/waffle-iron"
 
 [lib]
 name = "waffle_iron"
